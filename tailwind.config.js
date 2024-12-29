@@ -4,20 +4,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        // add these chatGPT
-        // #70D6FF
-        // #FF70A6
-        // #FF9770
-        // #FFD670
-        // #E9FF70
         background: "#70D6FF",
         backgroundDarker: "#0c0a09",
         accent: "#FF70A6",
         accentHover: "#FF70A6",
+        accentSecondary: "#FF9770", // Added second accent color
       },
 
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+      },
+
+      boxShadow: {
+        accent: "0px 4px 6px rgba(255, 112, 166, 0.5)", // Added custom accent shadow
       },
     },
   },
@@ -25,9 +24,9 @@ export default {
     function ({ addComponents }) {
       addComponents({
         ".hover-up": {
-          transition: "transform 0.3s ease", // Transition on transform property
+          transition: "transform 0.3s ease",
           "&:hover": {
-            transform: "translateY(-1px)", // Move up on hover
+            transform: "translateY(-1px)",
           },
         },
       });
