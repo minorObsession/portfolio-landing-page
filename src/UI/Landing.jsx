@@ -9,10 +9,8 @@ function Landing() {
         />
       </div>
       <div className="flex-1 ml-4 sm:ml-12 lg:ml-20 text-left">
-        <h1 className="text-stone-50 text-xl md:text-2xl lg:text-4xl">
-          Bogdan Terzic
-        </h1>
-        <p className="text-stone-300 text-sm md:text-lg lg:text-2xl mt-1 lg:mt-3">
+        <h1 className=" text-xl md:text-2xl lg:text-4xl">Bogdan Terzic</h1>
+        <p className="text-sm md:text-lg lg:text-2xl mt-1 lg:mt-3">
           Web developer passionate about creating amazing UIs
         </p>
       </div>

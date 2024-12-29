@@ -4,10 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#1a1a1a",
+        // add these chatGPT
+        // #70D6FF
+        // #FF70A6
+        // #FF9770
+        // #FFD670
+        // #E9FF70
+        background: "#70D6FF",
         backgroundDarker: "#0c0a09",
-        accent: "#515bcf",
-        accentHover: "#6574cd",
+        accent: "#FF70A6",
+        accentHover: "#FF70A6",
       },
 
       fontFamily: {
@@ -19,7 +25,7 @@ export default {
     function ({ addComponents }) {
       addComponents({
         ".hover-up": {
-          transition: "transform 0.2s ease", // Transition on transform property
+          transition: "transform 0.3s ease", // Transition on transform property
           "&:hover": {
             transform: "translateY(-1px)", // Move up on hover
           },
