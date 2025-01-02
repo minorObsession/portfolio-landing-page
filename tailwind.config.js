@@ -6,9 +6,9 @@ export default {
       colors: {
         background: "#70D6FF",
         backgroundDarker: "#0c0a09",
-        accent: "#FF70A6",
-        accentHover: "#FF70A6",
-        accentSecondary: "#FF9770", // Added second accent color
+        accent: "#A14EBF", //  #AF2BBF,
+        accentHover: "#FF89B5", // or "#E05891" for a darker effect
+        // accentSecondary: "#FF9770", // Added second accent color
       },
 
       fontFamily: {

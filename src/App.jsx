@@ -9,7 +9,7 @@ function App() {
   return (
     <div
       id="root"
-      className="bg-background text-accent mx-auto text-center w-full min-h-screen"
+      className="bg-[linear-gradient(100deg,#5FB0B7,#6C91BF)]   text-accent mx-auto text-center w-full min-h-screen"
     >
       <Header />
       <Landing />

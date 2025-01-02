@@ -9,7 +9,11 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="p-8 bg-gray-900 text-center">
+    <section
+      id="skills"
+      className="p-8 
+ text-center"
+    >
       <h2 className="text-2xl mb-4">Skills</h2>
       <div className="flex flex-wrap justify-center gap-4">
         {skills.map((skill, index) => (

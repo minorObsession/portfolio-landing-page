@@ -1,11 +1,14 @@
 function Landing() {
   return (
-    <section id="landing" className="p-4 lg:p-8 text-center flex items-center ">
-      <div className="flex-1 ml-4 sm:ml-12 lg:ml-20 text-left">
-        <h1 className=" text-xl md:text-2xl lg:text-4xl">Bogdan Terzic</h1>
-        <p className="text-sm md:text-xl lg:text-2xl mt-1 lg:mt-3">
-          Web developer passionate about creating amazing UIs
-        </p>
+    <section
+      id="landing"
+      className="p-4 lg:p-8 text-center flex items-center min-h-screen "
+    >
+      <div className="flex-1 ml-4 sm:ml-12 lg:ml-20 text-left font-bold">
+        <h1 className=" text-xl sm:text-2xl md:text-3xl lg:text-5x leading-7 lg:leading-20">
+          I&apos;m Bogdan - passionate React Web developer
+        </h1>
+        <p className="text-base sm:text-xl md:text-2xl lg:text-3xl mt-1 lg:mt-3"></p>
       </div>
       <div className="flex-shrink-0 mx-2 ">
         <img

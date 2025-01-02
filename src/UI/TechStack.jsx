@@ -11,7 +11,7 @@ function TechStack() {
   ];
 
   return (
-    <section id="tech-stack" className="p-8 text-center">
+    <section id="tech-stack" className="p-8 bg-gray-700 text-center">
       <h2 className="text-2xl mb-4">Tech Stack</h2>
       <div className="flex justify-center flex-wrap gap-4">
         {techIcons.map((icon, index) => (
