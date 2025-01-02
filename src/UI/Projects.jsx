@@ -3,7 +3,8 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
     title: "Wild Oasis",
-    description: 'SPA that allows hotel employees to manage hotel rooms (cabins), bookings and stays'
+    description:
+      "SPA that allows hotel employees to manage hotel rooms (cabins), bookings and stays",
     previewImage: "fhifash",
     githb: "fahsashffffi",
     deploy: "https:gjfa",
@@ -11,7 +12,7 @@ const projects = [
   },
   {
     title: "Food Fusion",
-    description: ''
+    description: "",
     previewImage: "fhifash",
     githb: "fahsashaaaai",
     deploy: "https:gjfas",
@@ -19,7 +20,7 @@ const projects = [
   },
   {
     title: "Recipe Radar",
-    description: 'Recipe searching, bookmarking and meal-planning app'
+    description: "Recipe searching, bookmarking and meal-planning app",
     previewImage: "fhifash",
     githb: "fahsassagefafsafashi",
     deploy: "https://app.netlify.com/sites/reciperadarapp/",
@@ -27,7 +28,7 @@ const projects = [
   },
   {
     title: "Solar Vibes",
-    description: ''
+    description: "",
     previewImage: "fhifash",
     githb: "fahsashsfsaafi",
     deploy: "https:gjfas",
