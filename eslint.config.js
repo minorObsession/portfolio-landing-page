@@ -35,11 +35,6 @@ export default [
       ],
       "react/prop-types": "off", // Disable prop-types rule globally
       "no-unused-vars": "warn", // Change to 'warn' to reduce severity
-      "react/jsx-no-target-blank": "off",
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true },
-      ],
     },
   },
 ];

@@ -12,7 +12,7 @@ function Landing() {
       </div>
       <div className="flex-shrink-0 mx-2 ">
         <img
-          src="../public/boci-slika.png"
+          src="/boci-slika.png"
           alt="Bogdan's Avatar"
           className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full"
         />
