@@ -13,9 +13,9 @@ function App() {
     >
       <Header />
       <Landing />
-      <Projects />
       <Skills />
-      <TechStack />
+      {/* <TechStack /> */}
+      <Projects />
     </div>
   );
 }

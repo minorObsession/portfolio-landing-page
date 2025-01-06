@@ -12,7 +12,7 @@ function Skills() {
     <section
       id="skills"
       className="p-8 
- text-center"
+ text-center bg-gray-700 "
     >
       <h2 className="text-2xl mb-4">Skills</h2>
       <div className="flex flex-wrap justify-center gap-4">

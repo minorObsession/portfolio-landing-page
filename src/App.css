@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+header,
+section,
+footer,
+nav,
+article,
+aside {
+  border-bottom: 1px solid #e2e8f043;
+}
