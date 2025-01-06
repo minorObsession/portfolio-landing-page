@@ -554,6 +554,44 @@ video {
   display: none;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
 }
@@ -688,10 +726,6 @@ video {
   height: 100%;
 }
 
-.max-h-\[110px\] {
-  max-height: 110px;
-}
-
 .max-h-\[200px\] {
   max-height: 200px;
 }
@@ -815,10 +849,6 @@ video {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -849,17 +879,17 @@ video {
 
 .border-accent {
   --tw-border-opacity: 1;
-  border-color: rgb(161 78 191 / var(--tw-border-opacity, 1));
+  border-color: rgb(132 94 247 / var(--tw-border-opacity, 1));
 }
 
 .bg-accent {
   --tw-bg-opacity: 1;
-  background-color: rgb(161 78 191 / var(--tw-bg-opacity, 1));
+  background-color: rgb(132 94 247 / var(--tw-bg-opacity, 1));
 }
 
 .bg-accentHover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 137 181 / var(--tw-bg-opacity, 1));
+  background-color: rgb(177 151 252 / var(--tw-bg-opacity, 1));
 }
 
 .bg-background {
@@ -870,6 +900,11 @@ video {
 .bg-backgroundDarker {
   --tw-bg-opacity: 1;
   background-color: rgb(12 10 9 / var(--tw-bg-opacity, 1));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gray-700 {
@@ -899,8 +934,8 @@ video {
   --tw-bg-opacity: 0.8;
 }
 
-.bg-\[url\(\'\/background\.jpg\'\)\] {
-  background-image: url('/background.jpg');
+.bg-\[url\(\'\/b3\.jpg\'\)\] {
+  background-image: url('/b3.jpg');
 }
 
 .bg-cover {
@@ -1009,7 +1044,7 @@ video {
 
 .text-accent {
   --tw-text-opacity: 1;
-  color: rgb(161 78 191 / var(--tw-text-opacity, 1));
+  color: rgb(132 94 247 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-200 {
@@ -1045,6 +1080,10 @@ video {
   opacity: 1;
 }
 
+.opacity-30 {
+  opacity: 0.3;
+}
+
 .shadow-accent {
   --tw-shadow: 0px 4px 6px rgba(255, 112, 166, 0.5);
   --tw-shadow-colored: 0px 4px 6px var(--tw-shadow-color);
@@ -1070,12 +1109,12 @@ video {
 }
 
 .shadow-accent {
-  --tw-shadow-color: #A14EBF;
+  --tw-shadow-color: #845ef7;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.blur-md {
-  --tw-blur: blur(12px);
+.blur-\[0\.5px\] {
+  --tw-blur: blur(0.5px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -1112,10 +1151,6 @@ video {
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.delay-300 {
-  transition-delay: 300ms;
 }
 
 .duration-300 {
@@ -1186,17 +1221,17 @@ body {
 
 .hover\:bg-accent:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(161 78 191 / var(--tw-bg-opacity, 1));
+  background-color: rgb(132 94 247 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-accent:hover {
   --tw-text-opacity: 1;
-  color: rgb(161 78 191 / var(--tw-text-opacity, 1));
+  color: rgb(132 94 247 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-accentHover:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 137 181 / var(--tw-text-opacity, 1));
+  color: rgb(177 151 252 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover {
@@ -1208,7 +1243,7 @@ body {
   --tw-shadow: 0px 4px 6px rgba(255, 112, 166, 0.5);
   --tw-shadow-colored: 0px 4px 6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: #A14EBF;
+  --tw-shadow-color: #845ef7;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1224,7 +1259,7 @@ body {
 
 .group:hover .group-hover\:text-accentHover {
   --tw-text-opacity: 1;
-  color: rgb(255 137 181 / var(--tw-text-opacity, 1));
+  color: rgb(177 151 252 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 640px) {
@@ -1332,6 +1367,10 @@ body {
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:leading-10 {
+    line-height: 2.5rem;
   }
 
   .lg\:leading-loose {

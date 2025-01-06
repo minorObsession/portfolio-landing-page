@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./UI/Header";
 import Landing from "./UI/Landing";
 import Projects from "./UI/Projects";
@@ -10,7 +9,8 @@ function App() {
       id="root"
       className="relative text-accent mx-auto text-center w-full min-h-screen overflow-hidden"
     >
-      <div className="fixed inset-0 bg-[url('/background.jpg')] bg-cover bg-center filter blur-md"></div>
+      <div className="fixed inset-0 bg-[url('/b3.jpg')] bg-cover bg-center filter blur-[0.5px]"></div>
+      <div className="fixed inset-0 bg-black opacity-30"></div> {/* Overlay */}
       <div className="relative z-10">
         <Header />
         <Landing />

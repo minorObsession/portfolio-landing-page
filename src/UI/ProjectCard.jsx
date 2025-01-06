@@ -16,11 +16,12 @@ function ProjectCard({
 
   return (
     <article
-      className={`bg-gray-800 p-4 rounded-md text-center cursor-pointer shadow-md transition-all duration-700 ease-in-out ${
+      className={`relative bg-gray-800 p-4 rounded-md text-center cursor-pointer shadow-md transition-all duration-700 ease-in-out ${
         isHovered
-          ? "max-h-[700px] scale-105 shadow-xl shadow-accent font-bold tracking-wide"
-          : "max-h-[110px] shadow-lg shadow-accent font-normal tracking-normal delay-300"
+          ? "scale-105 shadow-xl shadow-accent font-bold tracking-wide "
+          : "shadow-lg shadow-accent font-normal tracking-normal"
       }`}
+      style={{ height: isHovered ? "600px" : "110px" }} // Adjust the height as needed
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -29,12 +30,15 @@ function ProjectCard({
         <span className="text-gray-400 italic">Hover to see more details</span>
       )}
       <div
-        className={`p-2 transition-opacity duration-700 ease-in-out ${
-          isHovered ? "opacity-100" : "opacity-0"
+        className={`absolute inset-0 p-2 transition-opacity duration-700 ease-in-out ${
+          isHovered
+            ? "opacity-100 overflow-visible"
+            : "opacity-0 pointer-events-none"
         }`}
+        style={{ paddingTop: "3rem" }} // Adjust padding to ensure h3 stays in place
       >
         {isHovered && (
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 bg-gray-800 p-4 rounded-md">
             <p className="mt-2">{description || "Description about app..."}</p>
             <GitAndDeploy gitHub={gitHub} deployedLink={deployedLink} />
 
