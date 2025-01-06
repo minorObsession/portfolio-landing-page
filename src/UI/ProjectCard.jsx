@@ -12,32 +12,28 @@ function ProjectCard({
   techStack,
   deployedLink,
 }) {
-  const [isHovered, setIsHovered] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <article
       className={`bg-gray-800 p-4 rounded-md text-center cursor-pointer shadow-md transition-all duration-700 ease-in-out ${
         isHovered
           ? "max-h-[700px] scale-105 shadow-xl shadow-accent font-bold tracking-wide"
-          : "max-h-[90px] shadow-lg shadow-accent font-normal tracking-normal"
+          : "max-h-[110px] shadow-lg shadow-accent font-normal tracking-normal delay-300"
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ overflow: "hidden" }}
     >
       <h3 className="text-xl font-semibold text-accent">{title}</h3>
       {!isHovered && (
         <span className="text-gray-400 italic">Hover to see more details</span>
       )}
-      {/* // ! div that opens on hover */}
       <div
         className={`p-2 transition-opacity duration-700 ease-in-out ${
           isHovered ? "opacity-100" : "opacity-0"
         }`}
       >
         {isHovered && (
-          // ! when hovered
-
           <div className="flex flex-col gap-5">
             <p className="mt-2">{description || "Description about app..."}</p>
             <GitAndDeploy gitHub={gitHub} deployedLink={deployedLink} />

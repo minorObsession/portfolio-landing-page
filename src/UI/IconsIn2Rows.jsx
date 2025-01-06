@@ -76,7 +76,7 @@ const TechIconsLine = ({
           <span
             className={`absolute ${
               top ? "top-[-30px]" : "bottom-[-30px]"
-            } bg-gray-900 text-white text-xs p-1 rounded shadow-lg whitespace-nowrap z-50`}
+            } bg-gray-900 text-white text-xs p-1 rounded shadow-lg whitespace-nowrap z-[100]`}
           >
             {tech}
           </span>

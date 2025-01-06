@@ -10,5 +10,34 @@ footer,
 nav,
 article,
 aside {
-  border-bottom: 1px solid #e2e8f043;
+  border-bottom: 2px dashed #8908cf43;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* App.css or custom CSS file */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #8908cf43;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8908cf0c;
+  border-radius: 10px;
+  border: 3px solid #8908cf43;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8908cf0c;
 }
