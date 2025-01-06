@@ -20,7 +20,12 @@ function Landing() {
           {/* View Portfolio Button */}
           <button
             // ! apply smooth scrolling
-            onClick={() => (window.location.href = "#projects")}
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .querySelector("#projects")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
             href="#projects"
             className="bg-accent text-white py-2 px-4 rounded-full shadow-md hover:bg-accent-dark transition duration-300"
           >

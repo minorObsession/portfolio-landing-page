@@ -11,8 +11,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="p-8 
- text-center bg-gray-700 "
+      className="p-8 text-center bg-gradient-to-r from-accentSecondary to-accentTertiary opacity-65"
     >
       <h2 className="text-2xl mb-4">Skills</h2>
       <div className="flex flex-wrap justify-center gap-4">
