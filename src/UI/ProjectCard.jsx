@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import IconsIn2Rows from "./IconsIn2Rows";
 import GitAndDeploy from "./GitAndDeploy";
 import ImageSlider from "./ImageSlider";
 
+// TODO: make scrolling go further up
 function ProjectCard({
   title,
   imagesArray,
@@ -13,16 +14,25 @@ function ProjectCard({
   deployedLink,
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const cardRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setTimeout(() => {
+      cardRef.current.scrollIntoView({ behavior: "smooth" });
+    }, 200); // Adjust the delay as needed
+  };
 
   return (
     //!  Main container for the project card
     <article
+      ref={cardRef}
       className={`relative bg-gray-800 p-4 rounded-md text-center cursor-pointer shadow-md transition-all duration-700 ease-in-out ${
         isHovered
           ? "scale-105 shadow-xl shadow-accent font-bold tracking-wide h-[600px]"
           : "shadow-lg shadow-accent font-normal tracking-normal h-[110px]"
       }`}
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* // ! Title of the project */}

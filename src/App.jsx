@@ -1,8 +1,10 @@
+import Footer from "./UI/Footer";
 import Header from "./UI/Header";
 import Landing from "./UI/Landing";
 import Projects from "./UI/Projects";
 import Skills from "./UI/Skills";
 
+// TODO: make background "move" slightly
 function App() {
   return (
     <div
@@ -14,9 +16,10 @@ function App() {
       <div className="relative z-10">
         <Header />
         <Landing />
-        <Projects />
         <Skills />
+        <Projects />
         {/* <TechStack /> */}
+        <Footer />
       </div>
     </div>
   );
