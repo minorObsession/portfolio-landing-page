@@ -4,7 +4,8 @@ import Landing from "./UI/Landing";
 import Projects from "./UI/Projects";
 import Skills from "./UI/Skills";
 
-// TODO: make background "move" slightly
+// TODO: make background "move around" slightly (like space)
+
 function App() {
   return (
     <div

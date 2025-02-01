@@ -28,7 +28,7 @@ const TechIconsLine = ({ techs, hoveredTech, setHoveredTech, top = false }) => (
 );
 
 // ! IT CAN BE REFACTORED TO BE MORE REUSABLE
-function IconsIn2Rows({ icons }) {
+function TechIcons({ icons }) {
   const [hoveredTech, setHoveredTech] = useState(null);
 
   // Calculate the midpoint to split icons into two halves
@@ -56,4 +56,4 @@ function IconsIn2Rows({ icons }) {
   );
 }
 
-export default IconsIn2Rows;
+export default TechIcons;

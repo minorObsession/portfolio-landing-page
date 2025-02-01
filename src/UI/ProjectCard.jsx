@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-import IconsIn2Rows from "./IconsIn2Rows";
+import TechIcons from "./TechIcons";
 import GitAndDeploy from "./GitAndDeploy";
 import ImageSlider from "./ImageSlider";
 
@@ -13,7 +13,7 @@ function ProjectCard({
   techStack,
   deployedLink,
 }) {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(true);
   const cardRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -57,7 +57,7 @@ function ProjectCard({
             <ImageSlider images={imagesArray} />
 
             <p className="mb-[-6px] italic">Built using:</p>
-            <IconsIn2Rows icons={techStack} />
+            <TechIcons icons={techStack} />
           </div>
         )}
       </div>
