@@ -19,7 +19,7 @@ function ProjectCard({
   const handleMouseEnter = () => {
     setIsHovered(true);
     setTimeout(() => {
-      cardRef.current.scrollIntoView({ behavior: "smooth" });
+      cardRef?.current?.scrollIntoView({ behavior: "smooth" });
     }, 200); // Adjust the delay as needed
   };
 

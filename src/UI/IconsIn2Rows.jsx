@@ -11,7 +11,7 @@ const TechIconsLine = ({ techs, hoveredTech, setHoveredTech, top = false }) => (
         onMouseEnter={() => setHoveredTech(tech)}
         onMouseLeave={() => setHoveredTech(null)}
       >
-        {iconsConfig[tech].icon || tech}
+        {iconsConfig[tech]?.icon || tech}
         {/* Tooltip */}
         {hoveredTech === tech && (
           <span
