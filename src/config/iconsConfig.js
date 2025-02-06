@@ -74,4 +74,6 @@ const iconsConfig = {
   },
 };
 
+export const allSkills = Object.keys(iconsConfig);
+
 export default iconsConfig;

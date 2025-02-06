@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
-
-import TechIcons2Lines from "./TechIcons2Lines";
+import TechIcons from "./TechIcons";
 import GitAndDeploy from "./GitAndDeploy";
 import ImageSlider from "./ImageSlider";
 
@@ -24,49 +23,45 @@ function ProjectCard({
           setTimeout(() => {
             cardRef.current.scrollIntoView({
               behavior: "smooth",
-              block: "center", // Center it in viewport
+              // block: "center", // Center it in viewport
             });
           }, 500); // Matches the transition duration (700ms) but slightly earlier
         });
       }
-    }, 100);
+    }, 200);
   };
 
   return (
-    //!  Main container for the project card
     <article
       ref={cardRef}
-      className={`relative bg-gray-800 p-4 rounded-md text-center cursor-pointer shadow-md transition-all duration-700 ease-in-out ${
-        isHovered
-          ? "scale-105 shadow-xl shadow-accent font-bold tracking-wide h-[600px]"
-          : "shadow-lg shadow-accent font-normal tracking-normal h-[110px]"
-      }`}
+      className={`scroll-mt-40 transition-all duration-700 ease-in-out relative bg-gray-800 p-4 rounded-md text-center cursor-pointer shadow-md 
+    ${
+      isHovered
+        ? "scale-105 shadow-xl shadow-accent font-bold tracking-wide h-[600px]"
+        : "h-[110px]"
+    }`}
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={() => setTimeout(() => setIsHovered(false), 500)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      {/* // ! Title of the project */}
       <h3 className="text-xl font-semibold text-accent">{title}</h3>
       {!isHovered && (
-        // ! Message prompting the user to hover over the card
         <span className="text-gray-400 italic">Hover to see more details</span>
       )}
+
       <div
-        className={`absolute inset-0 p-2 transition-opacity duration-700 ease-in-out ${
+        className={`absolute inset-0 p-2 transition-all duration-700 ease-in-out ${
           isHovered
-            ? "opacity-100 overflow-visible pt-[3rem]"
-            : "opacity-0 pointer-events-none"
+            ? "opacity-100 h-[600px] overflow-visible pt-[3rem]"
+            : "opacity-0 h-[110px] pointer-events-none"
         }`}
       >
         {isHovered && (
-          // ! Container for the detailed view of the project card
           <div className="flex flex-col gap-5 bg-gray-800 p-4 rounded-md">
             <p className="mt-2">{description || "Description about app..."}</p>
             <GitAndDeploy gitHub={gitHub} deployedLink={deployedLink} />
-
             <ImageSlider images={imagesArray} />
-
             <p className="mb-[-6px] italic">Built using:</p>
-            <TechIcons2Lines icons={techStackArray} multipleLines={true} />
+            <TechIcons icons={techStackArray} />
           </div>
         )}
       </div>

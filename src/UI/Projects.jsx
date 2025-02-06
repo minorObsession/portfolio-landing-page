@@ -13,11 +13,11 @@ const projects = [
     deploy: "https://the-wild-oasis-rho-bay.vercel.app/",
     techStack: [
       "React",
-      "HTML5",
+      "HTML",
       "Styled Components",
       "Supabase",
       "React Query",
-      "Redux Toolkit",
+      "Redux",
     ],
   },
   {
@@ -33,11 +33,11 @@ const projects = [
     deploy: "https://foodfusionapp.netlify.app/",
     techStack: [
       "React",
-      "HTML5",
+      "HTML",
       "Styled Components",
       "React Query",
       "Supabase",
-      "Redux Toolkit",
+      "Redux",
     ],
   },
   {
@@ -49,14 +49,8 @@ const projects = [
       "/recipe-radar-preview/RecipeRadar3.png",
     ],
     gitHub: "https://github.com/minorObsession/recipe-radar",
-    deploy: "https://app.netlify.com/sites/reciperadarapp/",
-    techStack: [
-      "React",
-      "HTML5",
-      "Tailwind CSS",
-      "React Query",
-      "Redux Toolkit",
-    ],
+    deploy: "https://reciperadarapp.netlify.app/",
+    techStack: ["React", "HTML", "Tailwind CSS", "React Query", "Redux"],
   },
   {
     title: "Solar Vibes",
@@ -68,7 +62,7 @@ const projects = [
     ],
     gitHub: "https://github.com/chingu-voyages/v52-tier1-team-05/",
     deploy: "https://solar-vibes-la.netlify.app/",
-    techStack: ["JavaScript", "HTML5", "CSS3"],
+    techStack: ["JavaScript", "HTML", "CSS"],
   },
 ];
 
@@ -86,7 +80,7 @@ function Projects() {
             imagesArray={project.previewImages}
             description={project.description}
             gitHub={project.gitHub}
-            techStack={project.techStack}
+            techStackArray={project.techStack}
             deployedLink={project.deploy}
           />
         ))}
