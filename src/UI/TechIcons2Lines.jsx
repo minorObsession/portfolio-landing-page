@@ -7,7 +7,7 @@ function TechIconsLine({
   hoveredTech,
   setHoveredTech,
   top = false,
-  multipleLines,
+  displayIn2Lines,
 }) {
   return (
     <div className="flex justify-center mt-4 gap-8 flex-wrap relative grow-0">
@@ -36,10 +36,10 @@ function TechIconsLine({
 }
 
 // ! IT CAN BE REFACTORED TO BE MORE REUSABLE
-function TechIcons2Lines({ icons, multipleLines = false }) {
+function TechIcons2Lines({ icons, displayIn2Lines = false }) {
   const [hoveredTech, setHoveredTech] = useState(null);
 
-  if (!multipleLines)
+  if (!displayIn2Lines)
     return (
       <TechIconsLine
         techs={icons}
@@ -57,8 +57,8 @@ function TechIcons2Lines({ icons, multipleLines = false }) {
     <div className="flex flex-col gap-5">
       {/* First line of icons */}
       <TechIconsLine
-        multipleLines={multipleLines}
-        top={true}
+        displayIn2Lines={displayIn2Lines}
+        // top={true}
         techs={firstLineTechs}
         hoveredTech={hoveredTech}
         setHoveredTech={setHoveredTech}
@@ -66,7 +66,7 @@ function TechIcons2Lines({ icons, multipleLines = false }) {
 
       {/* Second line of icons */}
       <TechIconsLine
-        multipleLines={multipleLines}
+        displayIn2Lines={displayIn2Lines}
         techs={secondLineTechs}
         hoveredTech={hoveredTech}
         setHoveredTech={setHoveredTech}

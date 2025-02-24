@@ -7,16 +7,16 @@ function Landing() {
   return (
     <section
       id="landing"
-      className="p-4 lg:p-8 text-center flex flex-col lg:flex-row items-center justify-around min-h-screen"
+      className="flex flex-col items-center justify-around min-h-screen p-4 text-center lg:p-8 lg:flex-row"
     >
       {/* // ! Main content container */}
       <div className="flex-1 ml-4 sm:ml-12 lg:ml-20 text-left font-bold max-w-[60vw]">
         {/* // ! Heading */}
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl leading-7 lg:leading-loose">
+        <h1 className="text-xl leading-7 sm:text-2xl md:text-3xl lg:text-5xl lg:leading-loose">
           I&apos;m Bogdan - React web developer
         </h1>
         {/* // ! Subheading/Description */}
-        <p className="text-base sm:text-xl md:text-2xl lg:text-3xl mt-1 lg:mt-3 lg:leading-10">
+        <p className="mt-1 text-base sm:text-xl md:text-2xl lg:text-3xl lg:mt-3 lg:leading-10">
           Welcome to my portfolio! I specialize in building responsive web
           applications using latest web technologies
         </p>
@@ -27,17 +27,17 @@ function Landing() {
             // ! apply smooth scrolling
             onClick={scrollToProjects}
             href="#projects"
-            className="bg-accent text-white py-2 px-4 rounded-full shadow-md hover:bg-accent-dark transition duration-300"
+            className="px-4 py-2 text-white transition duration-300 rounded-full shadow-md bg-accent hover:bg-accent-dark"
           >
             View My Portfolio
           </button>
           {/* // ! Download Resume Button */}
-          <button className="bg-transparent border border-accent text-accent py-2 px-4 rounded-full shadow-md hover:bg-accent hover:text-white transition duration-300 ml-4">
+          <button className="px-4 py-2 ml-4 transition duration-300 bg-transparent border rounded-full shadow-md border-accent text-accent hover:bg-accent hover:text-white">
             Download Resume
           </button>
         </div>
         {/* // ! Social media links container */}
-        <div className="mt-6 flex space-x-4">
+        <div className="flex mt-6 space-x-4">
           {/* // ! LinkedIn Link */}
           <a
             href="https://linkedin.com/in/yourprofile"
@@ -69,7 +69,7 @@ function Landing() {
         <img
           src="/boci-slika.png"
           alt="Bogdan's Avatar"
-          className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full"
+          className="w-32 h-32 rounded-full md:w-48 md:h-48 lg:w-64 lg:h-64"
         />
       </div>
     </section>

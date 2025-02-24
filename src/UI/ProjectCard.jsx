@@ -12,7 +12,7 @@ function ProjectCard({
   techStackArray,
   deployedLink,
 }) {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(true);
   const cardRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -31,7 +31,7 @@ function ProjectCard({
       }
     }, 100);
   };
-
+  // * DON'T USE PIXELS
   return (
     //!  Main container for the project card
     <article
@@ -48,7 +48,7 @@ function ProjectCard({
       <h3 className="text-xl font-semibold text-accent">{title}</h3>
       {!isHovered && (
         // ! Message prompting the user to hover over the card
-        <span className="text-gray-400 italic">Hover to see more details</span>
+        <span className="italic text-gray-400">Hover to see more details</span>
       )}
       <div
         className={`absolute inset-0 p-2 transition-opacity duration-700 ease-in-out ${
@@ -59,7 +59,7 @@ function ProjectCard({
       >
         {isHovered && (
           // ! Container for the detailed view of the project card
-          <div className="flex flex-col gap-5 bg-gray-800 p-4 rounded-md">
+          <div className="flex flex-col gap-5 p-4 bg-gray-800 rounded-md">
             <p className="mt-2">{description || "Description about app..."}</p>
             <GitAndDeploy gitHub={gitHub} deployedLink={deployedLink} />
 
