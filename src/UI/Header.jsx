@@ -10,7 +10,7 @@ function Header() {
   }
 
   return (
-    <nav className="fixed w-full top-0 uppercase bg-gray-900 bg-opacity-80 p-4 z-10 mb-5">
+    <nav className="fixed top-0 z-10 w-full uppercase p-19 ">
       <ul className="flex justify-center gap-4 md:gap-10 lg:gap-16">
         <NavigationLink onClick={(e) => scrollToSection(e, "about")}>
           About

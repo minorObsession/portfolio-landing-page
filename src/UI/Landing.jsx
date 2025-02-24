@@ -7,73 +7,55 @@ function Landing() {
   return (
     <section
       id="landing"
-      className="flex flex-col items-center justify-around min-h-screen p-4 text-center lg:p-8 lg:flex-row"
+      className="grid grid-rows-[3fr_1fr] min-h-screen grid-cols-1  gap-8 text-center border-b-2 item justify-centers-center lg:gap-0 min-w-screen lg:grid-cols-2 border-b-amber-400"
     >
-      {/* // ! Main content container */}
-      <div className="flex-1 ml-4 sm:ml-12 lg:ml-20 text-left font-bold max-w-[60vw]">
-        {/* // ! Heading */}
-        <h1 className="text-xl leading-7 sm:text-2xl md:text-3xl lg:text-5xl lg:leading-loose">
-          I&apos;m Bogdan - React web developer
-        </h1>
-        {/* // ! Subheading/Description */}
-        <p className="mt-1 text-base sm:text-xl md:text-2xl lg:text-3xl lg:mt-3 lg:leading-10">
-          Welcome to my portfolio! I specialize in building responsive web
-          applications using latest web technologies
-        </p>
-        {/* // ! Buttons container */}
-        <div className="mt-6">
+      {/* // ! RIGHT SIDE */}
+      <article className="flex flex-col items-center justify-center grow lg:h-screen lg:col lg:order-1">
+        {/* // ! image div */}
+        <div className="w-[90%] h-[90%] mx-auto ">
+          <img src="/b1.jpg" className="object-cover w-full h-full" />
+        </div>
+      </article>
+
+      {/* // ! LEFT SIDE */}
+      <article className="flex items-center justify-center lg:col grow lg:h-screen lg:order-2 ">
+        <div className="md:max-w-[80%]">
+          {/* // ! I'm Bogdan */}
+          <h1 className="text-xl font-bold leading-7 md:text-4xl lg:text-5xl lg:leading-normal ">
+            I&apos;m Bogdan - React developer
+          </h1>
+          {/* // ! What do I do */}
+          <p className=" md:text-2xl lg:text-3xl">
+            I love building responsive web apps
+          </p>
+
           {/* // ! View Portfolio Button */}
           <button
             // ! apply smooth scrolling
             onClick={scrollToProjects}
             href="#projects"
-            className="px-4 py-2 text-white transition duration-300 rounded-full shadow-md bg-accent hover:bg-accent-dark"
+            className="transition duration-300 rounded-full shadow-md "
           >
             View My Portfolio
           </button>
           {/* // ! Download Resume Button */}
-          <button className="px-4 py-2 ml-4 transition duration-300 bg-transparent border rounded-full shadow-md border-accent text-accent hover:bg-accent hover:text-white">
-            Download Resume
+          <button className="px-4 py-2 transition duration-300 bg-transparent border rounded-full shadow-md hover:text-white">
+            Download Resume PDF
           </button>
         </div>
-        {/* // ! Social media links container */}
-        <div className="flex mt-6 space-x-4">
-          {/* // ! LinkedIn Link */}
-          <a
-            href="https://linkedin.com/in/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/icons/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
-          </a>
-          {/* // ! GitHub Link */}
-          <a
-            href="https://github.com/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/icons/github.png" alt="GitHub" className="w-8 h-8" />
-          </a>
-          {/* // ! Twitter Link */}
-          <a
-            href="https://twitter.com/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/icons/twitter.png" alt="Twitter" className="w-8 h-8" />
-          </a>
-        </div>
-      </div>
-      {/* // ! Avatar image container */}
-      <div className="flex-shrink-0 mx-2 mt-4 lg:mt-0">
-        <img
-          src="/boci-slika.png"
-          alt="Bogdan's Avatar"
-          className="w-32 h-32 rounded-full md:w-48 md:h-48 lg:w-64 lg:h-64"
-        />
-      </div>
+      </article>
     </section>
   );
 }
 
 export default Landing;
+
+// ! another option for photo
+// <div className="w-full h-full p-6">
+// <img src="/background.jpg" className="object-cover w-full" />
+// </div>
+
+// ! for padding around photo
+// <div className="w-[90%] h-[90%] mx-auto p-6">
+// <img src="/background.jpg" className="object-cover w-full h-full" />
+// </div>

@@ -10,16 +10,16 @@ function App() {
   return (
     <div id="root" className="">
       {/*  // ! app container */}
-      <div className="relative w-screen h-screen mx-auto overflow-hidden text-center "></div>
-
-      <main className="relative z-10">
-        <Header />
-        <Landing />
-        <Skills />
-        <Projects />
-        {/* <TechStack /> */}
-        <Footer />
-      </main>
+      <div className="relative min-h-screen overflow-x-hidden ">
+        <main className="relative z-10">
+          {/* <Header /> */}
+          <Landing />
+          <Skills />
+          <Projects />
+          {/* <TechStack /> */}
+          <Footer />
+        </main>
+      </div>
     </div>
   );
 }
