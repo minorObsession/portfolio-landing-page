@@ -10,7 +10,7 @@ function Landing() {
       className="grid grid-rows-[3fr_1fr] min-h-screen grid-cols-1  gap-8 text-center border-b-2 item justify-centers-center lg:gap-0 min-w-screen lg:grid-cols-2 border-b-amber-400"
     >
       {/* // ! RIGHT SIDE */}
-      <article className="flex flex-col items-center justify-center grow lg:h-screen lg:col lg:order-1">
+      <article className="flex flex-col items-center justify-center grow lg:h-screen lg:col lg:order-2">
         {/* // ! image div */}
         <div className="w-[90%] h-[90%] mx-auto ">
           <img src="/b1.jpg" className="object-cover w-full h-full" />
@@ -18,7 +18,7 @@ function Landing() {
       </article>
 
       {/* // ! LEFT SIDE */}
-      <article className="flex items-center justify-center lg:col grow lg:h-screen lg:order-2 ">
+      <article className="flex items-center justify-center lg:col grow lg:h-screen lg:order-1 ">
         <div className="md:max-w-[80%]">
           {/* // ! I'm Bogdan */}
           <h1 className="text-xl font-bold leading-7 md:text-4xl lg:text-5xl lg:leading-normal ">
